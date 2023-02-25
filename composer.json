@@ -1,5 +1,6 @@
 {
     "name": "dr-profee/docker-images-for-dev",
+    "bin": ["bin/drpcopydockerfiles"],
     "license": "0BSD",
     "authors": [
         {
@@ -7,5 +8,6 @@
             "email": "dr.profee@yandex.ru"
         }
     ],
-    "require": {}
+    "require": {
+    }
 }

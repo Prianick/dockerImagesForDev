@@ -1,0 +1,9 @@
+#!/bin/bash
+
+if [[ -z "$COMPOSER_RUNTIME_BIN_DIR" ]]; then
+  BIN_DIR="$( cd "$( dirname "${BASH_SOURCE[0]}" )" && pwd )"
+else
+  BIN_DIR="$COMPOSER_RUNTIME_BIN_DIR"
+fi
+
+php -f "${BIN_DIR}/../dr-profee/docker-images-for-dev/utils/copy_files.php"
