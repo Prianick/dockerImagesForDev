@@ -1,0 +1,11 @@
+{
+    "name": "asp/dockerImagesForDev",
+    "license": "BSD",
+    "authors": [
+        {
+            "name": "asp",
+            "email": "dr.profee@yandex.ru"
+        }
+    ],
+    "require": {}
+}
