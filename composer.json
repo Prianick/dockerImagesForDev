@@ -1,6 +1,6 @@
 {
     "name": "dr-profee/docker-images-for-dev",
-    "bin": ["bin/drpcopydockerfiles"],
+    "bin": ["bin/drpcopydockerimages"],
     "license": "0BSD",
     "authors": [
         {
