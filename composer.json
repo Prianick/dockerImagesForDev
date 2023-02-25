@@ -1,6 +1,6 @@
 {
     "name": "dr-profee/docker-images-for-dev",
-    "license": "BSD",
+    "license": "0BSD",
     "authors": [
         {
             "name": "asp",
