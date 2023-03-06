@@ -2,7 +2,7 @@ FROM php:8.2-fpm
 
 WORKDIR /app/www/html
 
-RUN apt update && apt install -y iputils-ping procps nano libpq-dev git
+RUN apt update && apt install -y iputils-ping procps nano libpq-dev git zip unzip
 RUN php -r "readfile('https://getcomposer.org/installer');" | php -- --install-dir=/usr/bin/ --filename=composer
 RUN pecl install xdebug \
     && docker-php-ext-enable xdebug \
@@ -13,3 +13,4 @@ RUN pecl install xdebug \
 
 RUN mv "$PHP_INI_DIR/php.ini-development" "$PHP_INI_DIR/php.ini"
 RUN sed -i 's/^;error_log = php_errors.log/error_log = \/var\/log\/php\/php-error.log/' $PHP_INI_DIR/php.ini
+ADD ./xdebug.ini $PHP_INI_DIR/conf.d/999-xdebug.ini

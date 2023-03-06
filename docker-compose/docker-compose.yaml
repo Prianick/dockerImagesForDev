@@ -21,9 +21,11 @@ services:
     build: ../docker/php8
     expose:
       - 9000
+      - 9003
     volumes:
       - ${SRC_PATH}:/app/www/html
       - ../logs/php:/var/log/php
+      - ../logs/xdebug:/var/log/xdebug
     environment:
       TZ: "Europe/Moscow"
     networks:
@@ -31,6 +33,8 @@ services:
   dbpostgres:
     build: ../docker/postgresql
     restart: always
+    ports:
+      - "54321:5432"
     volumes:
       - ../docker/postgresql/postgresql.conf:/etc/postgresql/postgresql.conf
     environment:
